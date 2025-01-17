@@ -45,7 +45,7 @@ export default function MonthGridDay({ day, isFirstWeek, isLastWeek,$app }: prop
       $app.config.callbacks.onClickPlusEvents(day.date)
     if (
       !$app.config.views.value.find(
-        (view) => view.name === InternalViewName.Day
+        (view:any) => view.name === InternalViewName.Day
       )
     )
       return

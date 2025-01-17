@@ -176,3 +176,6 @@ export const getClassNameForWeekday = (weekday: number): string => {
 
 export const getDayNameShort = (date: Date, locale: string) =>
   date.toLocaleString(locale, { weekday: 'short' })
+
+export const dateTimeStringRegex =
+  /^(\d{4})-(\d{2})-(\d{2}) (0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/

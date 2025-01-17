@@ -16,6 +16,7 @@ export const createMonth = (date: string, timeUnitsImpl: TimeUnits) => {
   const { year, month: monthFromDate } = toIntegers(date)
   const monthWithDates = timeUnitsImpl.getMonthWithTrailingAndLeadingDays(
     year,
+    // @ts-ignore
     monthFromDate
   )
   const month: Month = []

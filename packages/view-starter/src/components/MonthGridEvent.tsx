@@ -5,8 +5,7 @@ import { randomStringId } from "@schedule-x/shared"
 import { CalendarAppSingleton } from "@schedule-x/shared"
 import { useEffect } from "preact/hooks"
 
-import { dateTimeStringRegex } from "../../../../shared/src/utils/stateless/time/validation/regex"
-import { dateFromDateTime, toIntegers } from "./model"
+import { dateFromDateTime, dateTimeStringRegex, toIntegers } from "./model"
 import useEventInteractions, { isUIEventTouchEvent } from "./model/useEventInteractions"
 
 export const invokeOnEventClickCallback = (
@@ -15,6 +14,7 @@ export const invokeOnEventClickCallback = (
   e: UIEvent
 ) => {
   if ($app.config.callbacks.onEventClick) {
+    // @ts-ignore
     $app.config.callbacks.onEventClick(calendarEvent._getExternalEvent(), e)
   }
 }
@@ -24,7 +24,9 @@ export const invokeOnEventDoubleClickCallback = (
   calendarEvent: CalendarEventInternal,
   e: UIEvent
 ) => {
+    // @ts-ignore
   if ($app.config.callbacks.onDoubleClickEvent) {
+    // @ts-ignore
     $app.config.callbacks.onDoubleClickEvent(
       calendarEvent._getExternalEvent(),
       e

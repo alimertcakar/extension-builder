@@ -5,8 +5,7 @@ import { randomStringId } from "@schedule-x/shared"
 import { CalendarAppSingleton } from "@schedule-x/shared"
 import { useEffect } from "preact/hooks"
 
-import { dateTimeStringRegex } from "../../../../../../shared/src/utils/stateless/time/validation/regex"
-import { dateFromDateTime, toIntegers } from "../../model"
+import { dateFromDateTime, dateTimeStringRegex, toIntegers } from "../../model"
 import useEventInteractions, { isUIEventTouchEvent } from "../../model/useEventInteractions"
 
 export const invokeOnEventClickCallback = (

@@ -1,8 +1,7 @@
 import { CalendarAppSingleton } from '@schedule-x/shared'
+import { deepCloneEvent } from '@schedule-x/shared'
 import { CalendarEventInternal } from '@schedule-x/shared'
 import { useState } from 'preact/hooks'
-
-import { deepCloneEvent } from '../../../../../shared/src/utils/stateless/calendar/deep-clone-event'
 
 export const isUIEventTouchEvent = (event: UIEvent): boolean => {
     return 'touches' in event && typeof event.touches === 'object'

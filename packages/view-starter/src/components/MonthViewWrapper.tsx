@@ -16,11 +16,13 @@ export const MonthViewWrapper: PreactViewComponent = ({ $app, id }) => {
     })
     const newMonth = createMonth(
       $app.datePickerState.selectedDate.value,
+      // @ts-ignore
       $app.timeUnitsImpl
     )
     newMonth.forEach((week) => {
       week.forEach((day) => {
         day.backgroundEvents = filterByRange(
+          // @ts-ignore
           $app.calendarEvents.backgroundEvents.value,
           {
             start: day.date,
