@@ -1,0 +1,62 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@preact/signals':
+        specifier: ^1.1.5
+        version: 1.3.2(preact@10.25.4)
+      '@schedule-x/calendar':
+        specifier: ^1.53.0
+        version: 1.63.1(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)
+      '@schedule-x/shared':
+        specifier: ^1.53.0
+        version: 1.63.1
+      preact:
+        specifier: ^10.19.2
+        version: 10.25.4
+
+packages:
+
+  '@preact/signals-core@1.8.0':
+    resolution: {integrity: sha512-OBvUsRZqNmjzCZXWLxkZfhcgT+Fk8DDcT/8vD6a1xhDemodyy87UJRJfASMuSD8FaAIeGgGm85ydXhm7lr4fyA==}
+
+  '@preact/signals@1.3.2':
+    resolution: {integrity: sha512-naxcJgUJ6BTOROJ7C3QML7KvwKwCXQJYTc5L/b0eEsdYgPB6SxwoQ1vDGcS0Q7GVjAenVq/tXrybVdFShHYZWg==}
+    peerDependencies:
+      preact: 10.x
+
+  '@schedule-x/calendar@1.63.1':
+    resolution: {integrity: sha512-SKWU88Xf9OYiZ1Z103mh7Gk2DjSj0jajlIK/ndEC/4BH9PvYhsLLWnGdbyBzuAFUJMQK7h/gHWaDAKhkb6qenw==}
+    peerDependencies:
+      '@preact/signals': ^1.1.5
+      preact: ^10.19.2
+
+  '@schedule-x/shared@1.63.1':
+    resolution: {integrity: sha512-8OHf+yUGt2MkRsas8A/k0zX1MlXEH+1w6VbcXBAzMfPu/VwymQPb56oCerLu1N+hMXmB3VG7+uxear7BXCvd1w==}
+
+  preact@10.25.4:
+    resolution: {integrity: sha512-jLdZDb+Q+odkHJ+MpW/9U5cODzqnB+fy2EiHSZES7ldV5LK7yjlVzTp7R8Xy6W6y75kfK8iWYtFVH7lvjwrCMA==}
+
+snapshots:
+
+  '@preact/signals-core@1.8.0': {}
+
+  '@preact/signals@1.3.2(preact@10.25.4)':
+    dependencies:
+      '@preact/signals-core': 1.8.0
+      preact: 10.25.4
+
+  '@schedule-x/calendar@1.63.1(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4)':
+    dependencies:
+      '@preact/signals': 1.3.2(preact@10.25.4)
+      preact: 10.25.4
+
+  '@schedule-x/shared@1.63.1': {}
+
+  preact@10.25.4: {}
