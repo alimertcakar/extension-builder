@@ -1,5 +1,5 @@
 {
-  "name": "SX_PLACEHOLDER_PACKAGE",
+  "name": "@alimert/custom-schedule-x-view",
   "version": "0.0.1",
   "module": "./dist/core.js",
   "main": "./dist/core.cjs.js",
