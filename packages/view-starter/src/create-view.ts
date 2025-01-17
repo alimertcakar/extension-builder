@@ -14,7 +14,7 @@ export type PreactViewComponent = ReturnType<
 
 export const createMonthView: ViewFactory = () => createPreactView({
   name: InternalViewName.MonthGrid,
-  label: 'Month',
+  label: 'Test',
   setDateRange: setRangeForMonth,
   Component: MonthViewWrapper,
   hasWideScreenCompat: true,
