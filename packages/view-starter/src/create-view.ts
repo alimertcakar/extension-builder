@@ -1,7 +1,8 @@
 import {createPreactView, setRangeForMonth} from '@schedule-x/calendar'
 import {addMonths} from '@schedule-x/shared'
 
-import {ViewWrapper} from './components/view-wrapper'
+import {MonthViewWrapper} from './components/MonthViewWrapper'
+import { InternalViewName } from '.';
 
 type PreactView = ReturnType<typeof createPreactView>
 
@@ -11,13 +12,13 @@ export type PreactViewComponent = ReturnType<
   typeof createPreactView
 >['Component']
 
-export const createView: ViewFactory = () => createPreactView({
-  name: 'SX_PLACEHOLDER_VIEW_NAME',
-  label: 'SX_PLACEHOLDER_VIEW_LABEL',
-  Component: ViewWrapper,
+export const createMonthView: ViewFactory = () => createPreactView({
+  name: InternalViewName.MonthGrid,
+  label: 'Month',
+  setDateRange: setRangeForMonth,
+  Component: MonthViewWrapper,
   hasWideScreenCompat: true,
-  hasSmallScreenCompat: true,
+  hasSmallScreenCompat: false,
   backwardForwardFn: addMonths,
   backwardForwardUnits: 1,
-  setDateRange: setRangeForMonth,
 })

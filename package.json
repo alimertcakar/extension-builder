@@ -22,7 +22,7 @@
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "@schedule-x/calendar": "^1.58.1",
+    "@schedule-x/calendar": "^1.63.1",
     "@schedule-x/shared": "^1.58.1",
     "@schedule-x/theme-default": "^1.58.1",
     "minimist": "^1.2.8",
