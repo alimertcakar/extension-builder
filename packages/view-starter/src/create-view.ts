@@ -1,7 +1,7 @@
 import {createPreactView, setRangeForMonth} from '@schedule-x/calendar'
 import {addMonths} from '@schedule-x/shared'
+
 import {ViewWrapper} from './components/view-wrapper'
-import {Signal} from '@preact/signals'
 
 type PreactView = ReturnType<typeof createPreactView>
 
